@@ -32,7 +32,11 @@
 
   <script>
     backboneReady(() => {
-      new AppView();
+      new AppView({model:Video});
+      // var videoList = new VideoListView({/model: Video, collection: exampleVideoData}).render();
+      // console.log('new collection: ', videoList.collection);
+      // $('body').append(videoList.prototype.render());    //exampleVideoData)
+      // $('body').append(AppView.render());
     });
   </script>
 
