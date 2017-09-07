@@ -9,7 +9,9 @@ var VideoPlayerView = Backbone.View.extend({
 
 
   render: function() {
-    $('body').append(this.$el.html(this.template(this.model.attributes)));
+    console.log('VPV',this.$el.offsetParent());
+
+    $(this.$el.offsetParent()[0]).append(this.$el.html(this.template(this.model.attributes)));
     // $('body').append(this.$el.html('<div class="loading">Please wait...</div>'));
     // return this;
   },
